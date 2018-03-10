@@ -4,9 +4,14 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="theme.css">
 	</head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
 	<title>1Tag</title>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	<WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/webview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    />
 </head>
 <body style="background-color: white;">
 	<div class="container-fluid" style="background-image: url('full.jpg'); min-width: 101.2%;">
@@ -148,6 +153,12 @@
 		        modal.style.display = "none";
 		    }
 		}
+		myWebView.getSettings().setUseWideViewPort(true);
+		myWebView.getSettings().setLoadWithOverviewMode(true);
+		myWebView.getSettings().setSupportZoom(true);
+		myWebView.getSettings().setBuiltInZoomControls(true);
+		myWebView.getSettings().setDisplayZoomControls(false);
+
 	</script>
 
 </body>

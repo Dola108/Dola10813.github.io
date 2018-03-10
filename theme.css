@@ -1,15 +1,14 @@
 div.container-fluid {
-    width: 101%;
+    min-width: 101%;
     border: 1px #A9A9A9;
     margin-left: -8px;
     margin-bottom: -8px;
     margin-top: -6px;
-    background-color: white;
 }
 
 header {
     padding: 1em;
-    color: #ffffff;
+    color: #FFFFFF;
     background-image: url('full.jpg');
     background: rgba(0,0,0,0.7);
     clear: left;
@@ -97,7 +96,7 @@ li.tg{
 
 li.tg a {
 	text-decoration: none;
-	color: #ACE3C4;
+    color: #ACE3C4;
 }
 
 li.tg a:visited {
@@ -212,7 +211,7 @@ article {
 
 .button3:hover{
     box-shadow: 0 12px 16px 0 rgba(89, 149, 149, 0.6),0 17px 50px 0 rgba(89, 149, 149, 0);
-    background-color: #4CAF50;
+    background-color: #4CAF50 !important;
 }
 
 .button3:active {

@@ -9,7 +9,7 @@ div.container-fluid {
 
 header {
     padding: 1em;
-    color: red;
+    color: #ffffff;
     background-image: url('full.jpg');
     background: rgba(0,0,0,0.7);
     clear: left;

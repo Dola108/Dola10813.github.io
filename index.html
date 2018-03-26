@@ -20,7 +20,7 @@
 		   <h1>1Tag</h1>
 		</header>
 	</div>
-	  
+
 	<nav>
 	  <ul class="ls">
 	    <li class="ls"><a href="#">Home</a></li>
@@ -89,125 +89,25 @@
 
 	</div>
 
-	<div id="myModal" class="modal">
-	  <!-- Modal content -->
-	  <div class="modal-content" style="background-image: url('3.jpg');">
-	    <span onclick="document.getElementById('close').style.display='none'" class="close" title="Close Modal" style="margin-right: 2%">&times;</span>
-		  <form class="modal-content" style="background-color: transparent;" action="" method="post">
-		    <div style="background-color: transparent; margin-left: 50px; margin-top: -10px; margin-right: 0; margin-bottom: 0; width: 400px;">
-		      <h3 style="color: #acacac; font-size: 30px; font-family: Helvetica Neue;">Sign In</h3>
-		      <p style="font-family: Helvetica Neue; color: #acacac;">Please fill in this form to create an account.</p>
-		      <hr>
-		      <label for="Username"><b style="font-family: Helvetica Neue; color: #acacac;">Username : </b></label>
-		      <input type="name" placeholder="Enter Username" name="name" required>
-
-		      <label for="email"><b style="font-family: Helvetica Neue; color: #acacac;">Email : </b></label>
-		      <input type="mail" placeholder="Enter Email" name="email" required>
-
-		      <label for="psw"><b style="font-family: Helvetica Neue; color: #acacac;">Password : </b></label>
-		      <input type="password" placeholder="Enter Password" name="psw" required>
-
-		      <label>
-		        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px; color: #acacac;"> <b style="font-family: Helvetica Neue; color: #acacac;">Remember me</b>
-		      </label>
-
-		      <p class="message">Are you not registered?<a href="" style="color:dodgerblue">Register</a>.</p>
-
-		      <div class="clearfix">
-		        <button type="button" id="cancel" onclick="document.getElementById('myModal').style.display='none'" class="button3" style="margin-right: 5%; 
-				    background-color: #333;
-				    padding: 6px 16px;
-				    font-size: 14px;">Cancel</button>
-		        <button type="submit" class="button2" style=" padding:6px 16px; font-size: 14px;" name="login">Sign In</button>
-		      </div>
-		    </div>
-		  </form>
-	  </div>
-	</div>
-
-	<div id="myReg" class="modal">
-	  	<!-- Modal content -->
-	  <div class="modal-content" style="background-image: url('3.jpg'); overflow-y: initial !important;">
-	    <span onclick="document.getElementById('close').style.display='none'" class="close" title="Close Modal" style="margin-right: 2%">&times;</span>
-		  <form class="modal-content" style="background-color: transparent;" action="http://localhost/fuckinFromSkratch/register.php" method="post">
-		    <div style="background-color: transparent; margin-left: 50px; margin-top: -10px; margin-right: 0; margin-bottom: 0; width: 400px;">
-		      <h3 style="color: #acacac; font-size: 30px; font-family: Helvetica Neue;">Sign Up</h3>
-		      <p style="font-family: Helvetica Neue; color: #acacac;">Please fill in this form to log into your account.</p>
-		      <hr>
-		      <div style=" height: 250px; overflow-y: auto;">
-			      <label for="Username"><b style="font-family: Helvetica Neue; color: #acacac;">Username : </b></label>
-			      <input type="name" placeholder="Enter Username" id="uname" name="name" required>
-
-			      <label for="email"><b style="font-family: Helvetica Neue; color: #acacac;">Email : </b></label>
-			      <input type="mail" placeholder="Enter Email" name="email" required>
-
-			      <label for="psw"><b style="font-family: Helvetica Neue; color: #acacac;">Password : </b></label>
-			      <input type="password" placeholder="Enter Password" name="psw" required>
-
-			      <label for="psw2"><b style="font-family: Helvetica Neue; color: #acacac;">Confirm Password : </b></label>
-			      <input type="password" placeholder="Confirm Password" name="psw2" required>
-
-			      <label for="gender"><b style="font-family: Helvetica Neue; color: #acacac;">Gender(Male/Female) : </b></label>
-			      <input type="name" placeholder="Enter Your Gender" id="gen" name="gender">
-
-			      <label for="dtb"><b style="font-family: Helvetica Neue; color: #acacac;">Birth Date : </b></label>
-			      <input type="name" placeholder="Enter Date of Birth" id="bday" name="dtb">
-			  </div>
-		      <label>
-		        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px; color: #acacac;"> <b style="font-family: Helvetica Neue; color: #acacac;">Remember me</b>
-		      </label>
-
-		      <p style="font-family: Helvetica Neue; color: #acacac;">By creating an account you agree to our <a href="" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
-		      <div class="clearfix">
-		        <button type="button" id="cancel" onclick="document.getElementById('myReg').style.display='none'" class="button3" style="margin-right: 5%; 
-				    background-color: #333;
-				    padding: 6px 16px;
-				    font-size: 14px;">Cancel</button>
-		        <button type="submit" class="button2" style=" padding:6px 16px; font-size: 14px;" name="reg" id="register">Register </button>
-		      </div>
-		    </div>
-		  </form>
-	  </div>
-	</div>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
 	<script type="text/javascript">
 		var modal = document.getElementById('myModal');
-		var modalreg = document.getElementById('myReg');
 		var btn = document.getElementById("butn");
 		var btn0 = document.getElementById("butn0");
 		var span = document.getElementsByClassName("close")[0];
-		var span1 = document.getElementsByClassName("close")[1];
-
 		btn.onclick = function() {
+			$(document).ready(function(e) {
+			    $('#myModal').load('form.php',function(){modal.style.display = "block";});
+			});
+		}
+		btn0.onclick = function() {
 		    modal.style.display = "block";
 		}
-
-		btn0.onclick = function() {
-		    modalreg.style.display = "block";
-		}
-
-
-		$('.message a').click(function(){
-			modalreg.style.display = "block";
-		})
-
 		span.onclick = function() {
 		    modal.style.display = "none";
 		}
-
-		span1.onclick = function() {
-		    modalreg.style.display = "none";
-		}
-
 		window.onclick = function(event) {
-		    if (event.target.id == 'myModal') {
+		    if (event.target == modal) {
 		        modal.style.display = "none";
-		    }
-		    if (event.target.id == 'myReg') {
-		        modalreg.style.display = "none";
 		    }
 		}
 		myWebView.getSettings().setUseWideViewPort(true);
@@ -215,7 +115,6 @@
 		myWebView.getSettings().setSupportZoom(true);
 		myWebView.getSettings().setBuiltInZoomControls(true);
 		myWebView.getSettings().setDisplayZoomControls(false);
-
 	</script>
 
 </body>
